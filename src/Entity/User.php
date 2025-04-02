@@ -20,7 +20,7 @@ class User
     private ?string $name = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $birthday = null;
+    private ?\DateTimeInterface $birthdayDate = null;
 
     #[ORM\Column(length: 100)]
     private ?string $mail = null;
@@ -56,26 +56,16 @@ class User
         return $this;
     }
 
-    public function getBirthdayDate(): ?string
-    {
-        return $this->birthday_date;
-    }
-
-    public function setBirthdayDate(?string $birthday_date): static
-    {
-        $this->birthday_date = $birthday_date;
-
-        return $this;
-    }
+  
 
     public function getBirthday(): ?\DateTimeInterface
     {
-        return $this->birthday;
+        return $this->birthdayDate;
     }
 
-    public function setBirthday(?\DateTimeInterface $birthday): static
+    public function setBirthday(?\DateTimeInterface $birthdayDate): static
     {
-        $this->birthday = $birthday;
+        $this->birthdayDate = $birthdayDate;
 
         return $this;
     }

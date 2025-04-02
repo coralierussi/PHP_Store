@@ -66,15 +66,4 @@ class Vigil
         return $this;
     }
 
-    public function getMagasin2(): ?Magasin2
-    {
-        return $this->magasin2;
-    }
-
-    public function setMagasin2(?Magasin2 $magasin2): static
-    {
-        $this->magasin2 = $magasin2;
-
-        return $this;
-    }
 }
